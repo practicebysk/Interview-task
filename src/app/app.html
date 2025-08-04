@@ -1,0 +1,19 @@
+<div class="m-2">
+  <button class="btn btn-primary" (click)="addCalculator()">
+    Open Calculator
+  </button>
+  <button class="btn btn-primary ms-2" (click)="openGallery()">
+    Open Gallery
+  </button>
+
+  @for (calc of calculators; track calc) {
+  <app-calculator [id]="calc" (close)="closeCalculator($event)"></app-calculator>
+  } @if (isOpenGallery) {
+  <app-gallery
+    (imgClicked)="openImgPreview($event)"
+  ></app-gallery>
+
+  } @for (img of imgPreviews; track img) {
+  <app-image-preview [imageUrl]="img" (closePre)="closePreview($event)"></app-image-preview>
+  }
+</div>

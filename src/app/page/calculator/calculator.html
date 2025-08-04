@@ -1,0 +1,20 @@
+<div
+  #popup
+  class="popup calculator"
+  tabindex="0"
+  (focus)="setFocus(true)"
+  (blur)="setFocus(false)"
+  (keydown)="onKeyPress($event)"
+  (mousedown)="startDrag($event)"
+>
+  <div class="header">Calculator {{ id }}</div>
+  <button class="close position-absolute" (click)="closePopup()">×</button>
+
+  <input class="inputField" [value]="expreValue" readonly />
+
+  <div class="buttons">
+    @for (btn of ['7','8','9','/','4','5','6','*','1','2','3','-','0','.','=','+','C']; track btn) {
+      <button (click)="press(btn)">{{ btn }}</button>
+    }
+  </div>
+</div>

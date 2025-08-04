@@ -1,0 +1,35 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import "bootstrap/scss/bootstrap";
+
+/* styles.scss */
+.popup {
+  position: absolute;
+  background: #fff;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  user-select: none;
+  cursor: move;
+  outline: none;
+
+  .close {
+    top: 8px;
+    right: 8px;
+    border: none;
+    border-radius: 50%;
+    background-color: #e74c3c;
+    color: white;
+    font-size: 15px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+
+    &:hover {
+      background-color: #c0392b;
+    }
+  }
+}
+

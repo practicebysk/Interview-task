@@ -1,0 +1,25 @@
+<div class="popup preview" (mousedown)="startDrag($event)" #popup>
+  <button class="close position-absolute" (click)="closePopup()">×</button>
+  <img [src]="imageUrl.img" alt="img" class="w-100" />
+
+  @if (showCaption) {
+  <div
+    class="caption-box position-absolute"
+    [style.top.px]="captionTop"
+    [style.left.px]="captionLeft"
+    (mousedown)="startCaptionDrag($event)"
+    (dblclick)="editCaption = true"
+  >
+    @if (editCaption) {
+    <input
+      [(ngModel)]="captionText"
+      (blur)="editCaption = false"
+      autofocus
+    />
+    }@else{
+    <span>{{ captionText || "Enter caption" }}</span>
+    }
+  </div>
+  }
+  <button class="caption-btn position-absolute btn btn-primary" (click)="addCaption()">Add Caption</button>
+</div>

@@ -1,0 +1,8 @@
+<div class="popup gallery" (mousedown)="startDrag($event)" #popup>
+  <div class="header">Gallery</div>
+  <div class="gallery">
+    @for (img of images; track img) {
+    <img [src]="img" (click)="openPreview(img)" />
+    }
+  </div>
+</div>

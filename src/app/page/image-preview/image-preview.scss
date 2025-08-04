@@ -1,0 +1,30 @@
+.preview {
+  width: 300px;
+  top: 200px;
+  left: 200px;
+  padding: 5px;
+
+  .caption-box {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 2px 6px;
+    border-radius: 4px;
+    cursor: move;
+    font-size: 14px;
+    user-select: none;
+
+    input {
+      border: none;
+      background: transparent;
+      outline: none;
+      font-size: 14px;
+      width: 100px;
+    }
+  }
+
+  .caption-btn {
+    right: 10px;
+    bottom: 10px;
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+}
